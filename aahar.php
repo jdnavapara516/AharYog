@@ -4,7 +4,7 @@
         header('location:login.html');
     }
     $username = $_SESSION['username'];
-    $email = $_SESSION['email'];
+    // $email = $_SESSION['email'];
   
     
 
@@ -29,7 +29,7 @@
     <nav class="navbar">
         <div class="logo-profile">
             <div class="logo">
-                <img src="/images/ahar.jpg" alt="AaharYog" class="logo-img">
+                <img src="images/ahar.jpg" alt="AaharYog" class="logo-img">
                 <span>AaharYog</span>
             </div>
             <div class="user-profile">
@@ -55,7 +55,7 @@
         <main class="main-content">
             <div class="banner">
                 <h1>Protin Bar</h1>
-                <img src="protein_bar .jpg" alt="Protein Bar" class="banner-img">
+                <img src="images/protein_bar .jpg" alt="Protein Bar" class="banner-img">
             </div>
 
             <div class="product-grid">

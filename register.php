@@ -7,13 +7,9 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $query = "INSERT INTO register (email, username, password) VALUES ('$email', '$username', '$password')";
-    $result = mysqli_query($connection, $query);
-  
-
+    $query = "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$password')";
+    $result = mysqli_query($conn, $query);
     if($result){
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['email'] = $row['email'];
         echo "User registered successfully";
     }else{
         echo "Failed to register user";
@@ -40,7 +36,7 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
             <div class="logo">
                 <div class="heart-logo">
                     <div class="logo-placeholder">
-                        <img src="aharlogo.jpg" alt="Logo">
+                        <img src="images/aharlogo.jpg" alt="Logo">
                     </div>
                 </div>
                 <span>AaharYog</span>
@@ -81,7 +77,7 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
             </div>
             <div class="auth-image">
                 <div class="meditation-image">
-                    <img src="yog.jpg" alt="Meditation Image">
+                    <img src="images/yog.jpg" alt="Meditation Image">
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         $_SESSION['username'] = $row['username'];
      
       
-        header('Location: home.php');
+        header('Location: aahar.php');
     }else{
         echo "Invalid username or password";
     }
@@ -43,7 +43,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
             <div class="logo">
                 <div class="heart-logo">
                     <div class="logo-placeholder">
-                        <img src="aharlogo.jpg" alt="logo">
+                        <img src="images/aharlogo.jpg" alt="logo">
                     </div>
                 </div>
                 <span>AaharYog</span>
@@ -63,7 +63,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         <div class="auth-box">
             <div class="auth-image">
                 <div class="meditation-image">
-                    <img src="yog.jpg" alt="meditation">
+                    <img src="images/yog.jpg" alt="meditation">
                 </div>
             </div>
             <div class="auth-form">

@@ -210,10 +210,11 @@ h1 {
     opacity: 1;
 }
 .auth-container {
-  
+
     display: grid;
     place-items: center;
     padding: 6rem;
+
     }
     
     .auth-box {
