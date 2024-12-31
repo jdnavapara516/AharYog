@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +22,7 @@
                 <span>AaharYog</span>
             </div>
             <ul class="nav-links">
-                <li><a href="home.html">HOME</a></li>
+                <li><a href="home.php">HOME</a></li>
                 <li><a href="#">SERVICES</a></li>
                 <li><a href="#">ABOUT US</a></li>
                 <li><a href="login.html" class="nav-button">Login</a></li>
@@ -41,7 +43,7 @@
             <p>COMFORT FOOD MADE WITH PLANT-BASED<br>INGREDIENTS AND LOTS OF LOVE</p>
             
             <div class="cta-buttons">
-                <a href="aahar.html" class="cta-card">
+                <a href="aahar.php" class="cta-card">
                     <img src="ahar.jpg" alt="Aahar" class="card-image">
                     <span>Aahar</span>   
                 </a>

@@ -1,3 +1,19 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+        header('location:login.html');
+    }
+    $username = $_SESSION['username'];
+    $email = $_SESSION['email'];
+  
+    
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +97,7 @@
 
     <nav class="bottom-nav">
         <button class="nav-btn">
-            <a href="home.html"><i class="fa-solid fa-house"></i></a>
+            <a href="home.php"><i class="fa-solid fa-house"></i></a>
         </button>
         <button class="nav-btn">
             <i class="fa-brands fa-searchengin fa-solid"></i>        </button>
