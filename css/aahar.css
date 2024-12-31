@@ -42,6 +42,7 @@ body {
     font-family: Georgia, serif;
     font-size: 2rem;
     color: #1e40af;
+    /* color: #ffffff; */
     font-weight: bold;
 }
 .user-profile span{
@@ -86,17 +87,18 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    color:#1e40af ;
+    /* color:#1e40af ; */
     position: absolute; 
     right: 10px;
 }
 .scan-btn i {
     font-size: 2.2rem;
+    padding-right: 20px;
 }
-.scan-btn img {
+/* .scan-btn img {
     width: 30px;
     height: 30px;
-}
+} */
 
 .user-profile {
     display: flex;
@@ -106,6 +108,7 @@ body {
 .fa-solid{
 font-size: 1.5rem;
 }
+
 
 .profile-img {
     width: 40px;
@@ -215,16 +218,24 @@ font-size: 1.5rem;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #1e40af;
+    background:#b3e0ff;
     display: flex;
     justify-content: space-around;
     padding: 1rem;
+    transition: background 0.3s ease;
+}
+.bottom-nav:hover {
+    background: #a0d3ff; /* Lighter shade on hover */
 }
 
 .nav-btn {
     background: none;
     border: none;
     cursor: pointer;
+    transition: transform 0.2s ease; 
+}
+.nav-btn:hover {
+    transform: scale(1.1); /* Scale up on hover */
 }
 
 .nav-btn img {
