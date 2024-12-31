@@ -213,9 +213,16 @@ h1 {
 
     display: grid;
     place-items: center;
-    padding: 6rem;
+    padding-top: 6rem;
 
     }
+    .auth-container-signup {
+
+        display: grid;
+        place-items: center;
+        padding-top: 3rem;
+    
+        }
     
     .auth-box {
     background: white;

@@ -52,7 +52,7 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
         </nav>
     </header>
 
-    <div class="auth-container">
+    <div class="auth-container-signup">
         <div class="auth-box">
             <div class="auth-form">
                 <h2>Register here..</h2>
