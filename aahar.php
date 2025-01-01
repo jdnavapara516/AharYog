@@ -33,7 +33,7 @@
                 <span>AaharYog</span>
             </div>
             <div class="user-profile">
-                <span>Lucifer</span>
+                <span><?php echo $username; ?></span>
                 <i class="fa-solid fa-user"></i>
             </div>
         </div>

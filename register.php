@@ -10,9 +10,10 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
     $query = "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$password')";
     $result = mysqli_query($conn, $query);
     if($result){
-        echo "User registered successfully";
+        // echo "User registered successfully";
+        header("Location: login.php");
     }else{
-        echo "Failed to register user";
+        // echo "Failed to register user";
     }
 }
 
