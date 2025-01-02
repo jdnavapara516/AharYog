@@ -6,15 +6,10 @@
     $username = $_SESSION['username'];
     // $email = $_SESSION['email'];
   
-    
     if(isset($_POST['search'])){
         $search = $_POST['search'];
     }
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,27 +29,28 @@
                 <img src="images/aharlogo.jpg" alt="AaharYog" class="logo-img">
                 <span>AaharYog</span>
             </div>
-            <form action="aahar.php">
-        <!-- <div class="search-bar">
-          
-            <input type="text" placeholder="Search" name="search">
-            <button class="scan-btn" type="submit">
-                <i class="fa-solid fa-qrcode"></i>
-            </button>
-            
-        </div> -->
-        </form>
+            <form action="aahar.php" method="POST">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search" name="search">
+                    <button class="scan-btn" type="submit">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </button>
+                </div>
+            </form>
+            <form action="scan.php" method="POST" id="barcode-form">
+                <input type="hidden" name="barcode" id="barcode-input">
+                <button class="scan-btn" type="button" id="barcode-button">
+                    <i class="fa-solid fa-qrcode"></i>
+                </button>
+            </form>
             <div class="user-profile">
                 <span><?php echo $username; ?></span>
                 <i class="fa-solid fa-user"></i>
             </div>
         </div>
-      
     </nav>
 
     <div class="content">
-       
-
         <main class="main-content">
             <div class="banner">
                 <h1>Protin Bar</h1>
@@ -114,6 +110,34 @@
 
     <script src="js/aahar.js"></script>
     <script src="js/style.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <script>
+        document.getElementById('barcode-button').addEventListener('click', function() {
+            Quagga.init({
+                inputStream: {
+                    name: "Live",
+                    type: "LiveStream",
+                    target: document.querySelector('body'),
+                },
+                decoder: {
+                    readers: ["ean_reader"],
+                },
+            }, function (err) {
+                if (err) {
+                    console.error("Error initializing Quagga:", err);
+                    return;
+                }
+                Quagga.start();
+            });
+
+            Quagga.onDetected(function (result) {
+                const barcode = result.codeResult.code;
+                console.log("Detected barcode:", barcode);
+                Quagga.stop();
+                document.getElementById('barcode-input').value = barcode;
+                document.getElementById('barcode-form').submit();
+            });
+        });
+    </script>
 </body>
 </html>
