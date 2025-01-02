@@ -7,7 +7,9 @@
     // $email = $_SESSION['email'];
   
     
-
+    if(isset($_POST['search'])){
+        $search = $_POST['search'];
+    }
 ?>
 
 
@@ -38,19 +40,17 @@
             </div>
         </div>
         <div class="search-bar">
-            <input type="text" placeholder="Search">
-            <button class="scan-btn">
+            <form action="aahar.php">
+            <input type="text" placeholder="Search" name="search">
+            <button class="scan-btn" type="submit">
                 <i class="fa-solid fa-qrcode"></i>
             </button>
+            </form>
         </div>
     </nav>
 
     <div class="content">
-        <!-- <aside class="sidebar">
-            <div class="category">
-                <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?w=200&h=200&fit=crop" alt="Popcorn" class="category-img">
-            </div>
-        </aside> -->
+       
 
         <main class="main-content">
             <div class="banner">
@@ -61,35 +61,35 @@
             <div class="product-grid">
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
-                    <h3>Wafers & Namkeen</h3>
+                    <h3>Cacks & Bakes</h3>
                 </div>
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" alt="Biscuits">
                     <h3>Biscuits</h3>
                 </div><div class="product-card">
                     <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
-                    <h3>Wafers & Namkeen</h3>
+                    <h3>Wafers</h3>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" alt="Biscuits">
+                    <h3>Breakfast & Spreads</h3>
+                </div><div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
+                    <h3>Chocolates & Desserts</h3>
                 </div>
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" alt="Biscuits">
                     <h3>Biscuits</h3>
                 </div><div class="product-card">
                     <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
-                    <h3>Wafers & Namkeen</h3>
+                    <h3>Cold Drinks & Juices</h3>
                 </div>
                 <div class="product-card">
                     <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" alt="Biscuits">
-                    <h3>Biscuits</h3>
+                    <h3>Dry Fruits Oil & Masalas</h3>
                 </div><div class="product-card">
                     <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
-                    <h3>Wafers & Namkeen</h3>
-                </div>
-                <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" alt="Biscuits">
-                    <h3>Biscuits</h3>
-                </div><div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
-                    <h3>Wafers & Namkeen</h3>
+                    <h3>Tea Coffee & more</h3>
                 </div>
             </div>
         </main>
