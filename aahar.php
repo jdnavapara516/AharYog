@@ -34,19 +34,22 @@
                 <img src="images/ahar.jpg" alt="AaharYog" class="logo-img">
                 <span>AaharYog</span>
             </div>
+            <form action="aahar.php">
+        <div class="search-bar">
+          
+            <input type="text" placeholder="Search" name="search">
+            <button class="scan-btn" type="submit">
+                <i class="fa-solid fa-qrcode"></i>
+            </button>
+            
+        </div>
+        </form>
             <div class="user-profile">
                 <span><?php echo $username; ?></span>
                 <i class="fa-solid fa-user"></i>
             </div>
         </div>
-        <div class="search-bar">
-            <form action="aahar.php">
-            <input type="text" placeholder="Search" name="search">
-            <button class="scan-btn" type="submit">
-                <i class="fa-solid fa-qrcode"></i>
-            </button>
-            </form>
-        </div>
+      
     </nav>
 
     <div class="content">
