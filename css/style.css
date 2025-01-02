@@ -16,7 +16,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: #f3f5e6;
+    background-color:#111423;
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

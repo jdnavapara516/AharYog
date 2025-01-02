@@ -15,7 +15,7 @@ body {
     align-items: center;
     padding: 1rem 1rem;
     flex-direction: column;
-    background-color: #f3f5e6;
+    background-color: #111423;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -28,7 +28,6 @@ body {
     display: flex;
     justify-content: space-between; 
     width: 100%; 
-    /* margin-bottom: 1rem; */
 }
 
 .logo-img {
