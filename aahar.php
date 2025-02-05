@@ -29,20 +29,20 @@
                 <img src="images/aharlogo.jpg" alt="AaharYog" class="logo-img">
                 <span>AaharYog</span>
             </div>
-            <form action="aahar.php" method="POST">
+            <!-- <form action="aahar.php" method="POST">
                 <div class="search-bar">
                     <input type="text" placeholder="Search" name="search">
                     <button class="scan-btn" type="submit">
                         <i class="fa-solid fa-qrcode"></i>
                     </button>
                 </div>
-            </form>
-            <form action="scan.php" method="POST" id="barcode-form">
+            </form> -->
+            <!-- <form action="scan.php" method="POST" id="barcode-form">
                 <input type="hidden" name="barcode" id="barcode-input">
                 <button class="scan-btn" type="button" id="barcode-button">
                     <i class="fa-solid fa-qrcode"></i>
                 </button>
-            </form>
+            </form> -->
             <div class="user-profile">
                 <span><?php echo $username; ?></span>
                 <i class="fa-solid fa-user"></i>
@@ -59,38 +59,41 @@
 
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
+                    <img src="images/cakes.jpg" alt="Wafers & Namkeen">
                     <h3>Cacks & Bakes</h3>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" alt="Biscuits">
+                    <img src="images/biskut.jpg" alt="Biscuits">
                     <h3>Biscuits</h3>
                 </div><div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
+                    <img src="images/wafer.jpg" alt="Wafers & Namkeen">
                     <h3>Wafers</h3>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" alt="Biscuits">
+                    <img src="images/breakfast.png" alt="Biscuits">
                     <h3>Breakfast & Spreads</h3>
                 </div><div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
+                    <img src="images/chocolate.jpg" alt="Wafers & Namkeen">
                     <h3>Chocolates & Desserts</h3>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" alt="Biscuits">
-                    <h3>Biscuits</h3>
+                    <img src="images/maggi.jpg" alt="Biscuits">
+                    <h3>Noodels</h3>
                 </div><div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
+                    <img src="images/cold drinks.jpg" alt="Wafers & Namkeen">
                     <h3>Cold Drinks & Juices</h3>
                 </div>
+                
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200&h=200&fit=crop" alt="Biscuits">
+                    <img src="images/oil.jpg" alt="Biscuits">
                     <h3>Dry Fruits Oil & Masalas</h3>
                 </div><div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1581009137042-c552e485697a?w=200&h=200&fit=crop" alt="Wafers & Namkeen">
+                    <img src="images/coffe.jpg" alt="Wafers & Namkeen">
                     <h3>Tea Coffee & more</h3>
                 </div>
+               
             </div>
+            <div style="height: 100px"></div>
         </main>
     </div>
 
@@ -100,8 +103,10 @@
         </button>
         <button class="nav-btn">
             <i class="fa-brands fa-searchengin fa-solid"></i>        </button>
+            
         <button class="nav-btn">
-            <i class="fa-solid fa-qrcode"></i>        </button>
+
+            <a href="scan.php"><i class="fa-solid fa-qrcode"></i>      </a>  </button>
         <button class="nav-btn">
             <i class="fa-solid fa-file"></i>        </button>
         <button class="nav-btn">
@@ -111,33 +116,6 @@
     <script src="js/aahar.js"></script>
     <script src="js/style.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
-    <script>
-        document.getElementById('barcode-button').addEventListener('click', function() {
-            Quagga.init({
-                inputStream: {
-                    name: "Live",
-                    type: "LiveStream",
-                    target: document.querySelector('body'),
-                },
-                decoder: {
-                    readers: ["ean_reader"],
-                },
-            }, function (err) {
-                if (err) {
-                    console.error("Error initializing Quagga:", err);
-                    return;
-                }
-                Quagga.start();
-            });
-
-            Quagga.onDetected(function (result) {
-                const barcode = result.codeResult.code;
-                console.log("Detected barcode:", barcode);
-                Quagga.stop();
-                document.getElementById('barcode-input').value = barcode;
-                document.getElementById('barcode-form').submit();
-            });
-        });
-    </script>
+   
 </body>
 </html>

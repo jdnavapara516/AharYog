@@ -8,6 +8,8 @@ body {
     font-family: system-ui, -apple-system, sans-serif;
     background-color: #f3f5e6;
     min-height: 100vh;
+    padding-top: 120px; 
+    padding-bottom: 70px; 
 }
 
 .navbar {
@@ -15,8 +17,14 @@ body {
     align-items: center;
     padding: 1rem 1rem;
     flex-direction: column;
-    background-color: #111423;
+    background-color: #f3f5e6;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    position: fixed; 
+    top: 0; 
+    z-index: 100; 
 }
 
 .logo {
@@ -28,6 +36,7 @@ body {
     display: flex;
     justify-content: space-between; 
     width: 100%; 
+    margin-bottom: 1rem;
 }
 
 .logo-img {
@@ -40,14 +49,13 @@ body {
 .logo span {
     font-family: Georgia, serif;
     font-size: 2rem;
-    color: #e3d1aa;
-    /* color: #ffffff; */
+    color: #1e40af;
     font-weight: bold;
 }
 .user-profile span{
     font-family: Georgia, serif;
     font-size: 2rem;
-    color: #e3d1aa;
+    color: #1e40af;
     font-weight: bold;
 }
 
@@ -57,7 +65,6 @@ body {
     gap: 0;
     flex: 1;
     width: 100%;
-    /* height: 100%; */
     max-width: 1000px;
     margin: 0 2rem;
     position: relative;
@@ -86,7 +93,6 @@ body {
     background: none;
     border: none;
     cursor: pointer;
-    /* color:#1e40af ; */
     position: absolute; 
     right: 10px;
 }
@@ -94,10 +100,6 @@ body {
     font-size: 2.2rem;
     padding-right: 20px;
 }
-/* .scan-btn img {
-    width: 30px;
-    height: 30px;
-} */
 
 .user-profile {
     display: flex;
@@ -136,29 +138,14 @@ font-size: 1.5rem;
     flex: 1;
 }
 
-.banner {
-    background-color: #fef6e9;
-    border-radius: 30px;
-    /* padding: 2rem 4rem; */
-    padding: 2rem 3rem;
-    display: flex;
-    /* justify-content: space-between; */
-    justify-content: center;
-    align-items: center;
-    margin: 1rem 2rem 2rem; 
-    position: relative;  
-    /* overflow: hidden ; */
-    height:200px;
-}
+
 
 .banner h1 {
     font-size: 4rem; 
     color: #4a6741;          
     font-weight: bold;           
     font-family: system-ui, -apple-system, sans-serif;
-    /* margin-left: 2rem;         */
-    /* margin-left: 1rem; */
-    z-index: 1;/**/  
+    z-index: 1;
     margin-right: 340px;   
 
 }
@@ -166,13 +153,9 @@ font-size: 1.5rem;
 .banner-img {
    
     width: 190px;
-    /* height: auto; */
     height: 190px;
     object-fit: contain;
     position: absolute;       
-    /* right: 10px;              */
-    /* right: -10px; */
-    /* right: auto; */
     top: 50%;                
     transform: translateY(-50%) rotate(-10deg);
     background: #e9dcc7;     
@@ -222,9 +205,13 @@ font-size: 1.5rem;
     justify-content: space-around;
     padding: 1rem;
     transition: background 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem 0;
 }
 .bottom-nav:hover {
-    background: #a0d3ff; /* Lighter shade on hover */
+    background: #a0d3ff;
 }
 
 .nav-btn {
@@ -234,7 +221,7 @@ font-size: 1.5rem;
     transition: transform 0.2s ease; 
 }
 .nav-btn:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.1); 
 }
 
 .nav-btn img {
@@ -278,22 +265,73 @@ font-size: 1.5rem;
         right: 5px;
     }
     .banner {
-        padding: 1.5rem;
+        padding: 1rem;
         margin: 1rem;
     }
 
     .banner h1 {
         font-size: 2.5rem;
         margin-left: 0;
+        overflow: hidden;
+       
     }
 
     .banner-img {
-        /* width: 100px;
-        right: 20px;*/
+        right: 20px;
         width: 150px;
         height: 150px;
-        /* right: -10px; */
         margin-left: 120px;
         padding: 1rem;
     }
+    .banner-container {
+        overflow: hidden;
+        margin: 1rem auto 2rem;
+        max-width: 1000px; 
+        width: 90%;
+    }
+}
+.banner-container {
+    overflow: hidden;
+    margin: 1rem 2rem 2rem;
+    /* max-width: 1000px;  */
+    width: 90%; 
+}
+
+.banner-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    
+}
+
+.banner {
+    min-width: 100%;
+}
+.banner {
+    background-color: #c7c7c7;
+    border-radius: 30px;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem 2rem; 
+    position: relative;  
+    height:200px;
+    width: 120px;
+/**/
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-container {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.banner {
+    border-radius: 30px;
+}
+
+.banner-slider {
+    border-radius: 30px;
 }

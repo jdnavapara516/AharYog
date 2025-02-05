@@ -93,6 +93,202 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       width: 100px;
       height: 100px;
     }
+    /* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Start Scan Button */
+  #start-scan {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  #start-scan:hover {
+    background-color: #45a049;
+  }
+  
+  /* Scanner Container */
+  #scanner-container {
+    display: none;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    position: relative;
+  }
+  
+  video {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  /* Result Card */
+  #result-card {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #result-card h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Card Layout */
+  p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  span {
+    color: #555;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 20px;
+    }
+  
+    #start-scan {
+      width: 80%;
+    }
+  
+    #scanner-container {
+      width: 90%;
+    }
+  
+    #result-card {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    #product-image {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .label, span {
+      font-size: 14px;
+    }
+  
+    p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 18px;
+    }
+  
+    #start-scan {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 18px;
+    }
+  
+    #scanner-container {
+      width: 100%;
+    }
+  
+    #result-card {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    #product-image {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .label, span {
+      font-size: 13px;
+    }
+  
+    p {
+      font-size: 11px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 28px;
+    }
+  
+    #start-scan {
+      width: 200px;
+    }
+  
+    #scanner-container {
+      width: 500px;
+    }
+  
+    #result-card {
+      width: 151vh;
+      padding: 20px;
+    }
+  
+    #product-image {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .label, span {
+      font-size: 16px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+  
   </style>
 </head>
 <body>
