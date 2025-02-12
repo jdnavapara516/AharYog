@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($productData['status']) && $productData['status'] === 1) {
         $product = $productData['product'];
 
+
+        
         // Extract product details
         $nutritionScore = $product['nutriments']['nutrition-score-fr'] ?? null;
         $isHealthy = ($nutritionScore !== null && $nutritionScore <= 5) ? 'Yes' : 'No';

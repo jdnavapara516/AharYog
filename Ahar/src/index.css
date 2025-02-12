@@ -1,0 +1,435 @@
+/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Layout */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.header {
+  background-color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.menu-button {
+  display: none;
+}
+
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #4B5563;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #059669;
+}
+
+.login-button {
+  background-color: #059669;
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: #047857;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.nav-mobile .nav-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 300px;
+  background-color: #F3F4F6;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-button.left {
+  left: 0.5rem;
+}
+
+.slider-button.right {
+  right: 0.5rem;
+}
+
+/* Quotes Section */
+.quotes-section {
+  padding: 2rem 0;
+}
+
+.quotes-container {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.quotes-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.meditation-image {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.quote {
+  color: #374151;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.quote-author {
+  color: #6B7280;
+  margin-top: 0.25rem;
+}
+
+/* Services Section */
+.services-section {
+  padding: 2rem 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.service-card {
+  position: relative;
+}
+
+.service-image-container {
+  position: relative;
+  border-radius: 9999px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-content {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-align: right;
+}
+
+.service-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+}
+
+.service-list {
+  list-style: none;
+  color: white;
+  font-size: 1.125rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* Daily Workout Section */
+.daily-workout {
+  padding: 2rem 0;
+}
+
+.workout-container {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.workout-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.workout-content {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  text-align: right;
+}
+
+.workout-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.workout-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  list-style: none;
+  color: white;
+  font-size: 1.125rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.workout-list li::before {
+  content: "•";
+  margin-right: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #1F2937;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-circle {
+  width: 2rem;
+  height: 2rem;
+  background-color: #059669;
+  border-radius: 9999px;
+}
+
+.footer-brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.footer-tagline {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+}
+
+.footer-contact {
+  text-align: center;
+}
+
+.footer-name {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.footer-info {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.social-icon:hover {
+  color: #059669;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+  }
+
+  .hero {
+    height: 400px;
+  }
+
+  .slider-button.left {
+    left: 1rem;
+  }
+
+  .slider-button.right {
+    right: 1rem;
+  }
+
+  .quotes-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .meditation-image {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .quote {
+    text-align: left;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-title {
+    font-size: 3rem;
+  }
+
+  .workout-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service-title {
+    font-size: 3.5rem;
+  }
+
+  .workout-title {
+    font-size: 3.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-button {
+    display: block;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile.open {
+    display: block;
+  }
+}
