@@ -1,0 +1,377 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f3ed;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .aaharyog-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #111423;
+    color: white;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e3d1aa;
+    font-family: Cormorant Garanond;
+  }
+  
+  .navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    color: #e3d1aa;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #4ade80;
+  }
+  
+  .login-button {
+    background-color: #4ade80;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #22c55e;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Contact Section Styles */
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .services-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #5c4c18;
+    margin-bottom: 1rem;
+  }
+  
+  .problem-container {
+    display: flex;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .problem-image-container {
+    width: 50%;
+    position: relative;
+  }
+  
+  .problem-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    position: relative;
+    border: solid #111423 2px;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    z-index: 1;
+  }
+  
+  .problem-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+  }
+  
+  .problem-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    line-height: 1;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .contact-us {
+    font-size: 1.5rem;
+    color: #5c4c18;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contact-phone, .contact-email {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Contact Form Styles */
+  .contact-form-container {
+    margin-top: 2rem;
+  }
+  
+  .contact-form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #5c4c18;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .form-input {
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #e5d9c9;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .form-textarea {
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #e5d9c9;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+    height: 200px;
+    resize: none;
+  }
+  
+  .form-submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  
+  .send-button {
+    background-color: #5c4c18;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .send-button:hover {
+    background-color: #7a6423;
+  }
+  
+  .send-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #111423;
+    color: #e3d1aa;
+    padding: 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer-logo-img {
+    height: 50px;
+  }
+  
+  .footer-logo-text {
+    font-size: 2em;
+    font-family: Cormorant Garanond;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  .logo-tagline {
+    font-size: 0.7rem;
+    opacity: 0.8;
+  }
+  
+  .footer-info, .footer-contact {
+    text-align: center;
+  }
+  
+  .footer-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-student {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    opacity: 0.8;
+  }
+  
+  .footer-phone, .footer-email {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #555;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  .social-icon:hover {
+    background-color: #4ade80;
+  }
+  
+  /* Social media icons */
+  .facebook-icon::before {
+    content: "f";
+    font-weight: bold;
+  }
+  
+  .instagram-icon::before {
+    content: "i";
+    font-weight: bold;
+  }
+  
+  .twitter-icon::before {
+    content: "t";
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    
+    .navigation ul {
+      gap: 1rem;
+    }
+    
+    .problem-container {
+      flex-direction: column;
+    }
+    
+    .problem-image-container,
+    .problem-text {
+      width: 100%;
+      padding-left: 0;
+    }
+    
+    .problem-title {
+      font-size: 3.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .form-row {
+      flex-direction: column;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      text-align: center;
+    }
+  }

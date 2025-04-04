@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biscuits</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="back-button">←</button>
+            <h1>Biscuits</h1>
+            <div class="header-right">
+                <div class="filter-dropdown">
+                    <button class="filter-button">Filter(<span id="filter-count">0</span>)</button>
+                    <div class="filter-menu">
+                        <div class="filter-section">
+                            <h3>Health Grade</h3>
+                            <label><input type="checkbox" value="A"> Grade A</label>
+                            <label><input type="checkbox" value="B"> Grade B</label>
+                            <label><input type="checkbox" value="C"> Grade C</label>
+                            <label><input type="checkbox" value="D"> Grade D</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="search-button">🔍</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="categories">
+            <div class="category" data-category="decorated">
+                <img src="image/littel heart.png" alt="Decorated biscuits">
+                <p>Decorated Biscuits</p>
+            </div>
+            <div class="category" data-category="digestive">
+                <img src="image/nutri choice.png" alt="Digestive biscuits">
+                <p>Digestive Biscuits</p>
+            </div>
+            <div class="category active" data-category="filled">
+                <img src="image/Filled biscuit.png" alt="Filled biscuits">
+                <p>Filled Biscuits</p>
+            </div><div class="category" data-category="decorated">
+                <img src="/Aahar/project 2/image/no sugar.png" alt="Decorated biscuits">
+                <p>Low Suger Biscuits</p>
+            </div>
+            <div class="category" data-category="digestive">
+                <img src="/Aahar/project 2/image/no sugar 2.png" alt="Digestive biscuits">
+                <p>Millet/Nut based Biscuits</p>
+            </div>
+            <div class="category" data-category="filled">
+                <img src="/Aahar/project 2/image/Plain Buscuit.png" alt="Filled biscuits">
+                <p>Plain,Sweet Biscuits</p>
+            </div><div class="category" data-category="decorated">
+                <img src="/Aahar/project 2/image/Sandwich biscuit.png" alt="Decorated biscuits">
+                <p>Sandwich Biscuits</p>
+            </div>
+            <div class="category" data-category="digestive">
+                <img src="/Aahar/project 2/image/Savoury.png" alt="Digestive biscuits">
+                <p>Savory Biscuits</p>
+            </div>
+            <div class="category" data-category="filled">
+                <img src="/Aahar/project 2/image/Savoury.png" alt="Filled biscuits">
+                <p>Traditional Savory Biscuits</p>
+            </div>
+            <div class="category" data-category="filled">
+                <img src="/Aahar/project 2/image/tra_Sweet.png" alt="Filled biscuits">
+                <p>Traditional Sweet Biscuits</p>
+            </div>
+            <div class="category" data-category="filled">
+                <img src="/Aahar/project 2/image/Wafer.png" alt="Filled biscuits">
+                <p>Wafer Biscuits</p>
+            </div>
+        </aside>
+
+        <section class="products" id="products-grid">
+            <!-- Products will be added dynamically via JavaScript -->
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
