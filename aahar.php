@@ -1,18 +1,19 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['username'])){
-        header('location:login.html');
-    }
-    $username = $_SESSION['username'];
-    // $email = $_SESSION['email'];
-  
-    if(isset($_POST['search'])){
-        $search = $_POST['search'];
-    }
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('location:login.html');
+}
+$username = $_SESSION['username'];
+// $email = $_SESSION['email'];
+
+if (isset($_POST['search'])) {
+    $search = $_POST['search'];
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo-profile">
@@ -52,9 +54,26 @@
 
     <div class="content">
         <main class="main-content">
-            <div class="banner">
-                <h1>Protin Bar</h1>
-                <img src="images/protein_bar .jpg" alt="Protein Bar" class="banner-img">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
 
             <div class="product-grid">
@@ -65,33 +84,37 @@
                 <div class="product-card">
                     <img src="images/biskut.jpg" alt="Biscuits">
                     <h3>Biscuits</h3>
-                </div><div class="product-card">
+                </div>
+                <div class="product-card">
                     <img src="images/wafer.jpg" alt="Wafers & Namkeen">
                     <h3>Wafers</h3>
                 </div>
                 <div class="product-card">
                     <img src="images/breakfast.png" alt="Biscuits">
                     <h3>Breakfast & Spreads</h3>
-                </div><div class="product-card">
+                </div>
+                <div class="product-card">
                     <img src="images/chocolate.jpg" alt="Wafers & Namkeen">
                     <h3>Chocolates & Desserts</h3>
                 </div>
                 <div class="product-card">
                     <img src="images/maggi.jpg" alt="Biscuits">
                     <h3>Noodels</h3>
-                </div><div class="product-card">
+                </div>
+                <div class="product-card">
                     <img src="images/cold drinks.jpg" alt="Wafers & Namkeen">
                     <h3>Cold Drinks & Juices</h3>
                 </div>
-                
+
                 <div class="product-card">
                     <img src="images/oil.jpg" alt="Biscuits">
                     <h3>Dry Fruits Oil & Masalas</h3>
-                </div><div class="product-card">
+                </div>
+                <div class="product-card">
                     <img src="images/coffe.jpg" alt="Wafers & Namkeen">
                     <h3>Tea Coffee & more</h3>
                 </div>
-               
+
             </div>
             <div style="height: 100px"></div>
         </main>
@@ -102,20 +125,21 @@
             <a href="home.php"><i class="fa-solid fa-house"></i></a>
         </button>
         <button class="nav-btn">
-            <i class="fa-brands fa-searchengin fa-solid"></i>        </button>
-            
+            <i class="fa-brands fa-searchengin fa-solid"></i> </button>
+
         <button class="nav-btn">
 
-            <a href="scan.php"><i class="fa-solid fa-qrcode"></i>      </a>  </button>
+            <a href="scan.php"><i class="fa-solid fa-qrcode"></i> </a> </button>
         <button class="nav-btn">
-            <i class="fa-solid fa-file"></i>        </button>
+            <i class="fa-solid fa-file"></i> </button>
         <button class="nav-btn">
-            <i class="fa-solid fa-user"></i>        </button>
+            <i class="fa-solid fa-user"></i> </button>
     </nav>
 
     <script src="js/aahar.js"></script>
     <script src="js/style.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
-   
+
 </body>
+
 </html>

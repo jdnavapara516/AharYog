@@ -1,50 +1,62 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['username'])){
-        header('location:login.html');
-    }
-    $username = $_SESSION['username'];
-    // $email = $_SESSION['email'];
-  
-    if(isset($_POST['search'])){
-        $search = $_POST['search'];
-    }
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('location:login.html');
+}
+$username = $_SESSION['username'];
+// $email = $_SESSION['email'];
+
+if (isset($_POST['search'])) {
+    $search = $_POST['search'];
+}
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AaharYog - Protein Bar</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
 </head>
+
+<style>
+    /* .slider {
+        height: 100px;
+    } */
+
+    /* .slider img {
+        height: 100%;
+        object-fit: cover;
+    } */
+</style>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="logo">
-            <img src="images/Logo.jpg"alt="AaharYog Logo">
+            <img src="images/Logo.jpg" alt="AaharYog Logo">
             <span>AaharYog</span>
         </div>
-       
+
         <div class="logo">
-           
             <span> Welcome to AharYog <?php echo $username; ?></span>
         </div>
-            
-       
     </header>
 
-    <!-- Slider Section -->
     <section class="slider">
-        <button class="slider-btn prev">&lt;</button>
+        <button class="slider-btn prev"><</button>
         <div class="slider-image">
             <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=1200&q=80" alt="Protein Bar">
-            <h1 class="slider-title">Protien Bar</h1>
+            <h1 class="slider-title">Protein Bar</h1>
         </div>
-        <button class="slider-btn next">&gt;</button>
+        <button class="slider-btn next">></button>
     </section>
 
     <!-- Quotes Section -->
@@ -64,89 +76,78 @@
     <section class="products">
         <div class="products-grid">
             <!-- Row 1 -->
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Chips'">
                 <img src="images/wafer.jpg" alt="Chips">
                 <span>Chips</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Namkeen'">
                 <img src="images/namkeen.png" alt="Namkeen">
                 <span>Namkeen</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Biscuit'">
                 <img src="images/biskut.jpg" alt="Biscuit">
                 <span>Biscuit</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Chocolates'">
                 <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=300&q=80" alt="Chocolates">
                 <span>Chocolates</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Noodles'">
                 <img src="images/noodles.jpg" alt="Chips">
                 <span>Noodles</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Cakes'">
                 <img src="images/cakes.jpeg" alt="Namkeen">
                 <span>Cakes</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=BreakFast'">
                 <img src="images/breakfast.png" alt="Biscuit">
                 <span>BreakFast</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Juice'">
                 <img src="images/juice.jpg" alt="Chocolates">
                 <span>Juice</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Burger'">
                 <img src="images/burger.jpg" alt="Chips">
                 <span>Burger</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Pizza'">
                 <img src="images/pizza.jpg" alt="Namkeen">
                 <span>Pizza</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Drinkes'">
                 <img src="images/drinks.jpg" alt="Biscuit">
                 <span>Drinkes</span>
             </div>
-            <div class="product-item">
+            <div class="product-item" onclick="window.location.href='item/item.php?category=Pasta'">
                 <img src="images/pasta.jpg" alt="Chocolates">
                 <span>Pasta</span>
             </div>
-            <!-- Repeat similar structure for other rows -->
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=100&q=80" alt="AaharYog Logo">
-                <p>STAY FIT, STAY HAPPY</p>
-            </div>
-            <div class="footer-contact">
-                <p>ANAND</p>
-                <p>STUDENT OF</p>
-                <p>COMPUTER SCIENCE</p>
-                <p>CONTACT: +91 0123456789</p>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i data-lucide="facebook"></i></a>
-                <a href="#"><i data-lucide="instagram"></i></a>
-                <a href="#"><i data-lucide="twitter"></i></a>
-            </div>
-        </div>
+    <footer>
+      
         <nav class="bottom-nav">
-            <a href="#"><i data-lucide="home"></i></a>
-            <a href="#"><i data-lucide="search"></i></a>
-            <a href="scan.php"><i data-lucide="scan-line"></i></a>
-            <a href="#"><i data-lucide="list"></i></a>
-            <a href="../profilesection/profile.php"><i data-lucide="user"></i></a>
-            </nav>
+            <a href="#">Home<i style="color: antiquewhite;" data-lucide="home"></i></a>
+            <a href="../Yog/Page 1/yogsection.php">Yog<i data-lucide="Yog"></i></a>
+            <a href="scan.php">Scan<i data-lucide="scan-line"></i></a>
+            <a href="../bmrsection/bmr.php">Bmr<i data-lucide="list"></i></a>
+            <a href="../profilesection/user.php">User<i data-lucide="user"></i></a>
+        </nav>
+        
     </footer>
 
     <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+        
+       
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    
+   
 </body>
+
 </html>
