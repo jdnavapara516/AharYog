@@ -118,7 +118,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <!-- <div class="footer-content">
+        <div class="footer-content">
             <div class="footer-logo">
                 <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=100&q=80" alt="AaharYog Logo">
                 <p>STAY FIT, STAY HAPPY</p>
@@ -134,14 +134,14 @@
                 <a href="#"><i data-lucide="instagram"></i></a>
                 <a href="#"><i data-lucide="twitter"></i></a>
             </div>
-        </div> -->
+        </div>
         <nav class="bottom-nav">
             <a href="#"><i data-lucide="home"></i></a>
             <a href="#"><i data-lucide="search"></i></a>
             <a href="scan.php"><i data-lucide="scan-line"></i></a>
             <a href="#"><i data-lucide="list"></i></a>
-            <a href="#"><i data-lucide="user"></i></a>
-        </nav>
+            <a href="../profilesection/profile.php"><i data-lucide="user"></i></a>
+            </nav>
     </footer>
 
     <script>

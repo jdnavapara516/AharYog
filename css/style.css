@@ -501,7 +501,7 @@ h1 {
 }
 .auth-image img {
     width: 100%;
-    height: auto;
+    height: 400px;
     aspect-ratio: 16 / 9; 
     object-fit: cover; 
 }
