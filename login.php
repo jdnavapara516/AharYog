@@ -16,7 +16,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         $_SESSION['username'] = $row['username'];
      
       
-        header('Location: Ahar/AharSection.php');
+        header('Location: HomePage/Homepage.php');
     }else{
         echo "Invalid username or password";
     }

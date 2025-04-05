@@ -1,0 +1,317 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1ebe5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .aaharyog-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #111423;
+    color: white;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e3d1aa;
+    font-family: Cormorant Garanond;
+  }
+  
+  .navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    color: #e3d1aa;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #4ade80;
+  }
+  
+  .login-button {
+    background-color: #4ade80;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #22c55e;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #5c4c18;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* Team Members Section */
+  .team-members {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .team-member {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .team-member.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .member-image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .member-info {
+    flex: 1;
+  }
+  
+  .member-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #3d3d3d;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  
+  .member-description ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .member-description li {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  /* Presentations Section */
+  .presentations {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .presentation-card {
+    flex: 1;
+    background-color: #e9883a;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .presentation-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .presentation-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(222, 184, 135, 0.8);
+    padding: 1rem;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #111423;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer-logo-img {
+    height: 50px;
+  }
+  
+  .footer-logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  .logo-tagline {
+    font-size: 0.7rem;
+    opacity: 0.8;
+  }
+  
+  .footer-info, .footer-contact {
+    text-align: center;
+  }
+  
+  .footer-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-student {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    opacity: 0.8;
+  }
+  
+  .footer-phone, .footer-email {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #555;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  .social-icon:hover {
+    background-color: #4ade80;
+  }
+  
+  /* Social media icons */
+  .facebook-icon::before {
+    content: "f";
+    font-weight: bold;
+  }
+  
+  .instagram-icon::before {
+    content: "i";
+    font-weight: bold;
+  }
+  
+  .twitter-icon::before {
+    content: "t";
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    
+    .navigation ul {
+      gap: 1rem;
+    }
+    
+    .team-member, .team-member.reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .member-description ul {
+      text-align: left;
+    }
+    
+    .presentations {
+      flex-direction: column;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
