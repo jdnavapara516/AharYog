@@ -1,4 +1,6 @@
 <?php
+//CONNECT DATABASE
+include '../db.php';
 // Handle POST request from the JavaScript barcode fetch
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   header('Content-Type: application/json');
@@ -12,6 +14,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo json_encode(['status' => 'error', 'message' => 'Barcode is required']);
     exit;
   }
+
+  // FIRST CHECK ITEAM IS IN DATABASE OR NOT if item exist then fetch all data from database and start session add item data in to seesion and redirect to details.php page
+  $stmt = $conn->prepare("SELECT * FROM item WHERE Barcode = ?");
+  $stmt->bind_param("s", $barcode);
+  $stmt->execute();
+  $result = $stmt->get_result();
+
+  // Check if item exists
+  if ($result->num_rows > 0) {
+    $item = $result->fetch_assoc();
+    session_start();
+    $_SESSION['item_data'] = $item;
+
+    echo json_encode(['status' => 'success', 'redirect' => 'details.php']);
+  } else {
+    echo json_encode(['status' => 'error', 'message' => 'Item not found']);
+  }
+
 
   // Fetch data from Open Food Facts API
   $apiUrl = "https://world.openfoodfacts.org/api/v0/product/$barcode.json";
